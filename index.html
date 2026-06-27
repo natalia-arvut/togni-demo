@@ -65,7 +65,11 @@ tailwind.config = {
   /* hero scrim: dark on left, fading to clear on right */
   .hero-scrim { background:linear-gradient(90deg, rgba(8,9,11,.92) 0%, rgba(8,9,11,.78) 34%, rgba(8,9,11,.35) 58%, rgba(8,9,11,.05) 78%, rgba(8,9,11,0) 100%); }
   .hero-top { background:linear-gradient(180deg, rgba(8,9,11,.55) 0%, rgba(8,9,11,0) 30%); }
-  .hero-bot { background:linear-gradient(0deg, rgba(8,9,11,.55) 0%, rgba(8,9,11,0) 26%); }
+  .hero-bot { background:linear-gradient(0deg, rgba(8,9,11,.65) 0%, rgba(8,9,11,0) 24%); }
+  @media (max-width:1023px){
+    .hero-scrim{ background:linear-gradient(180deg, rgba(8,9,11,.94) 0%, rgba(8,9,11,.82) 34%, rgba(8,9,11,.45) 60%, rgba(8,9,11,.18) 82%, rgba(8,9,11,.12) 100%); }
+    #heroimg{ object-position:70% 86% !important; }
+  }
   /* card image cover */
   .ph { background-size:cover; background-position:center; }
   /* reveal */
@@ -141,12 +145,12 @@ tailwind.config = {
 
 <!-- ============ HERO ============ -->
 <section class="relative w-full overflow-hidden" style="min-height:100svh;">
-  <img src="assets/hero.jpg" alt="Autocarro Togni Trasporti su una strada di montagna in Ticino" class="absolute inset-0 w-full h-full object-cover" style="object-position:78% 50%;">
+  <img id="heroimg" src="assets/hero.jpg" alt="Autocarro Togni Trasporti su una strada di montagna in Ticino" class="absolute inset-0 w-full h-full object-cover" style="object-position:78% 50%;">
   <div class="absolute inset-0 hero-scrim"></div>
   <div class="absolute inset-0 hero-top"></div>
   <div class="absolute inset-0 hero-bot"></div>
 
-  <div class="relative max-w-[1280px] mx-auto px-5 lg:px-8 min-h-[100svh] flex flex-col justify-center pt-[68px]">
+  <div class="relative max-w-[1280px] mx-auto px-5 lg:px-8 min-h-[100svh] flex flex-col justify-start lg:justify-center pt-[100px] lg:pt-[68px] pb-10">
     <div class="max-w-[680px]">
       <div class="flex items-center gap-3 mb-6 reveal">
         <span class="h-[2px] w-9 bg-red"></span>
